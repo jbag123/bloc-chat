@@ -1,4 +1,9 @@
-<form  ng-submit="modal.openRoom()">
-        <input type="text" ng-model="modal.newRoom" />
-        <input type="submit" value="Save room" />
+<div class="modal-header">
+  <h4 class="modal-title">Add a new room</h4>
+</div>
+<div >
+<form class="modal-body" ng-submit="modal.openRoom()">
+        <input class="modal-content"  type="text" ng-model="modal.newRoom" />
+        <input class="modal-content"  type="submit" value="Save room" />
 </form>
+</div>

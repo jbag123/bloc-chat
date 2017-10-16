@@ -1,4 +1,36 @@
-<button ng-click="rooms.open()">Click Here</button>
-<ul>
-        <li ng-repeat="roomSingle in rooms.roomList">{{roomSingle.$value}}</li>
-</ul>
+<div class="container">
+<aside class="sidebar">
+        <h1>Bloc Rooms</h1>
+        <p>Please click this button to add new rooms</p>
+        <button ng-click="rooms.open()">Click Here</button>
+        <h2> Current rooms</h2>
+        <nav>
+                <ul>
+                        <li ng-repeat="roomSingle in rooms.roomList" ng-click="rooms.setCurrentRoom(roomSingle)">{{roomSingle.$value}}</li>
+                </ul>
+        </nav>
+</aside>
+<main class="main">
+        <h1>{{ rooms.roomList[0].$value }}</h1>
+        <tr>
+                <td>
+                        <h3></h3>
+                        <p>
+
+                        </p>
+                </td>
+                <td>
+                        <h3></h3>
+                        <p>
+
+                        </p>
+                </td>
+                <td>
+                        <h3></h3>
+                        <p>
+
+                        </p>
+                </td>
+        </tr>
+</main>
+</div>
