@@ -1,9 +1,11 @@
 (function() {
-  function PromptCtrl($uibModalInstance, $cookies){
-              this.addUser = function () {
-                        $cookies.put('blocChatCurrentUser', this.username);
-                        $uibModalInstance.close();
-              };
+                function PromptCtrl($uibModalInstance, $cookies){
+
+                        // add username entered in view back into Room service and close modal
+                        this.addUser = function () {
+                                $cookies.put('blocChatCurrentUser', this.username);
+                                $uibModalInstance.close();
+                        };
 
       }
 

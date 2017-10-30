@@ -13,5 +13,13 @@
 <main class="main">
         <h1>{{ rooms.currentRoom.$value }}</h1>
         <p ng-repeat="message in rooms.currentMessages">{{ message.username }}: {{ message.content }}</p>
+        <form ng-submit="rooms.sendMessage()">
+                <input type="text" ng-model="rooms.newMessage" />
+                <input type="submit" ng-disabled="!rooms.currentRoom" value="Save Message" />
+        </form>
+        <form>
+                <input type="text" />
+                <input type="submit" value="Find User" />
+        </form>
 </main>
 </div>

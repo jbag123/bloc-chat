@@ -1,11 +1,13 @@
 (function() {
-        function ModalCtrl(Room, $uibModalInstance) {
+                function ModalCtrl(Room, $uibModalInstance) {
 
-                this.openRoom = function() {
-                        Room.add(this.newRoom);
-                        $uibModalInstance.close();
+                        // add room entered in view back into Room service and close modal
+                        this.addRoom = function() {
+                                Room.add(this.newRoom);
+                                $uibModalInstance.close();
+                        };
+
                 }
-}
 
         angular
                 .module('blocChat')
