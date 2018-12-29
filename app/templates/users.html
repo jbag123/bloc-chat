@@ -1,0 +1,5 @@
+<div ng-app="sampleApp" ng-controller="UserCtrl">
+  <button ng-click="signIn()">Sign In Anonymously</button>
+  <p ng-if="firebaseUser">Signed in user: <strong>{{ firebaseUser.uid }}</strong></p>
+  <p ng-if="error">Error: <strong>{{ error }}</strong></p>
+</div>
